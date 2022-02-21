@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: test-taint
+  name: test-taint
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: test-taint
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: test-taint
+    spec:
+      containers:
+      - image: nginx
+        name: nginx
+        resources: {}
+      tolerations:
+      - key: "key"
+        operator: "Exists"
+        effect: "NoSchedule"
+status: {}

@@ -1,0 +1,121 @@
+apiVersion: v1
+kind: Node
+metadata:
+  annotations:
+    kubeadm.alpha.kubernetes.io/cri-socket: /run/containerd/containerd.sock
+    node.alpha.kubernetes.io/ttl: "0"
+    volumes.kubernetes.io/controller-managed-attach-detach: "true"
+  creationTimestamp: "2022-02-21T01:33:12Z"
+  labels:
+    beta.kubernetes.io/arch: amd64
+    beta.kubernetes.io/os: linux
+    disktype: ssd
+    kubernetes.io/arch: amd64
+    kubernetes.io/hostname: node1
+    kubernetes.io/os: linux
+  name: node1
+  resourceVersion: "49999"
+  uid: 70888ea3-2527-4b0c-8cab-ed70f121f435
+spec: {}
+status:
+  addresses:
+  - address: 10.128.0.31
+    type: InternalIP
+  - address: node1
+    type: Hostname
+  allocatable:
+    cpu: "2"
+    ephemeral-storage: "9200546596"
+    hugepages-1Gi: "0"
+    hugepages-2Mi: "0"
+    memory: 894368Ki
+    pods: "110"
+  capacity:
+    cpu: "2"
+    ephemeral-storage: 9983232Ki
+    hugepages-1Gi: "0"
+    hugepages-2Mi: "0"
+    memory: 996768Ki
+    pods: "110"
+  conditions:
+  - lastHeartbeatTime: "2022-02-21T01:33:34Z"
+    lastTransitionTime: "2022-02-21T01:33:34Z"
+    message: Weave pod has set this
+    reason: WeaveIsUp
+    status: "False"
+    type: NetworkUnavailable
+  - lastHeartbeatTime: "2022-02-21T11:08:21Z"
+    lastTransitionTime: "2022-02-21T01:33:12Z"
+    message: kubelet has sufficient memory available
+    reason: KubeletHasSufficientMemory
+    status: "False"
+    type: MemoryPressure
+  - lastHeartbeatTime: "2022-02-21T11:08:21Z"
+    lastTransitionTime: "2022-02-21T01:33:12Z"
+    message: kubelet has no disk pressure
+    reason: KubeletHasNoDiskPressure
+    status: "False"
+    type: DiskPressure
+  - lastHeartbeatTime: "2022-02-21T11:08:21Z"
+    lastTransitionTime: "2022-02-21T01:33:12Z"
+    message: kubelet has sufficient PID available
+    reason: KubeletHasSufficientPID
+    status: "False"
+    type: PIDPressure
+  - lastHeartbeatTime: "2022-02-21T11:08:21Z"
+    lastTransitionTime: "2022-02-21T01:33:32Z"
+    message: kubelet is posting ready status. AppArmor enabled
+    reason: KubeletReady
+    status: "True"
+    type: Ready
+  daemonEndpoints:
+    kubeletEndpoint:
+      Port: 10250
+  images:
+  - names:
+    - docker.io/library/centos@sha256:c73f515d06b0fa07bb18d8202035e739a494ce760aa73129f60f4bf2bd22b407
+    - docker.io/library/centos:7
+    sizeBytes: 76101639
+  - names:
+    - docker.io/library/nginx@sha256:2834dc507516af02784808c5f48b7cbe38b8ed5d0f4837f16e78d00deb7e7767
+    - docker.io/library/nginx:latest
+    sizeBytes: 56733668
+  - names:
+    - docker.io/library/httpd@sha256:5cc947a200524a822883dc6ce6456d852d7c5629ab177dfbf7e38c1b4a647705
+    - docker.io/library/httpd:latest
+    sizeBytes: 56422213
+  - names:
+    - k8s.gcr.io/kube-proxy@sha256:30116c7218264d95623d3918a50da703675755cae866cd4c324586611fcd50ea
+    - k8s.gcr.io/kube-proxy:v1.23.4
+    sizeBytes: 39275690
+  - names:
+    - ghcr.io/weaveworks/launcher/weave-kube@sha256:d797338e7beb17222e10757b71400d8471bdbd9be13b5da38ce2ebf597fb4e63
+    - ghcr.io/weaveworks/launcher/weave-kube:2.8.1
+    sizeBytes: 30924173
+  - names:
+    - docker.io/library/traefik@sha256:16ab8f1f8facbfa34f11411735be42ca09cc207f4f607f874c0951659aeac258
+    - docker.io/library/traefik:v1.7
+    sizeBytes: 22618247
+  - names:
+    - ghcr.io/weaveworks/launcher/weave-npc@sha256:38d3e30a97a2260558f8deb0fc4c079442f7347f27c86660dbfc8ca91674f14c
+    - ghcr.io/weaveworks/launcher/weave-npc:2.8.1
+    sizeBytes: 12814131
+  - names:
+    - docker.io/library/busybox@sha256:afcc7f1ac1b49db317a7196c902e61c6c3c4607d63599ee1a82d702d249a0ccb
+    - docker.io/library/busybox:latest
+    sizeBytes: 777073
+  - names:
+    - k8s.gcr.io/pause@sha256:1ff6c18fbef2045af6b9c16bf034cc421a29027b800e4f9b68ae9b1cb3e9ae07
+    - k8s.gcr.io/pause:3.5
+    sizeBytes: 301416
+  nodeInfo:
+    architecture: amd64
+    bootID: 0a597299-d81d-4e09-9fff-f35a5ddddd34
+    containerRuntimeVersion: containerd://1.5.5
+    kernelVersion: 5.4.0-1064-gcp
+    kubeProxyVersion: v1.23.4
+    kubeletVersion: v1.23.4
+    machineID: 775f28f748363e4889531e559bce4c45
+    operatingSystem: linux
+    osImage: Ubuntu 18.04.6 LTS
+    systemUUID: 775f28f7-4836-3e48-8953-1e559bce4c45
