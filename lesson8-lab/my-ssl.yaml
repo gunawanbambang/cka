@@ -1,0 +1,8 @@
+apiVersion: "stable.example.com/v1"
+kind: ssl
+metadata:
+  name: my-new-sslb
+spec:
+  cert: "my-cert"
+  key: "my-key"
+  domain: "my-domain"

@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: testsvc
+  name: testsvc
+  namespace: net-demo1
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: testsvc
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: testsvc
+    spec:
+      containers:
+      - image: nginx
+        name: nginx
+        resources: {}
+status: {}

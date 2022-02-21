@@ -5,4 +5,4 @@ metadata:
   namespace: default
 spec: 
   type: ExternalName
-  externalName: www.sandervanvugt.com
+  externalName: testsvc.net-demo1.svc.cluster.local
