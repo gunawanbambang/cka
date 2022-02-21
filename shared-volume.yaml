@@ -1,0 +1,35 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: pod
+  name: shared-volume
+spec:
+  containers:
+  - args:
+    - shared-volume
+    image: centos:7
+    name: pod1
+    resources: {}
+    command:
+      - sleep
+      - "3600"
+    volumeMounts:
+      - mountPath: /centos1
+        name: myvolume
+  - name: pod2
+    image: centos:7
+    command:
+      - sleep
+      - "3600"
+    volumeMounts:
+      mountPath: /centos2
+      name: myvolume
+  volumes:
+    - name: myvolume
+      emptyDir: {}
+
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}
