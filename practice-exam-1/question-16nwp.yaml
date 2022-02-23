@@ -12,6 +12,6 @@ spec:
     - namespaceSelector:
         matchLabels:
           ns: secure
-    - podSelector:
+      podSelector:
         matchLabels:
           app: busy-secure

@@ -25,3 +25,19 @@ spec:
   - image: nginx
     name: nginx
 ---
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: busy-secure-rouge
+  namespace: secure
+  labels:
+    app: not-allowed
+spec:
+  containers:
+  - image: busybox
+    name: busybox
+    command:
+    - sleep
+    - "3600"
+---

@@ -10,4 +10,4 @@ spec:
   initContainers:
   - name: init-myservice
     image: busybox:1.28
-    command: ['sh', '-c', "for i in {1..2}; do touch /data/runfile.txt; sleep 1; done"]
+    command: ['sh', '-c', "for i in {1..1}; do touch /data/runfile.txt; sleep 1; done"]
