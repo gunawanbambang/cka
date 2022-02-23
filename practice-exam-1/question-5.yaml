@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: xxazz-pod
+  namespace: run-once
+spec:
+  containers:
+  - image: alpine
+    name: alpine
+    resources: {}
+    command:
+    - sleep
+    - "3600"
+  restartPolicy: Never

@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: question-2
+  namespace: mynamespace
+spec:
+  containers:
+  - image: alpine
+    name: alpine
+    resources: {}
+    command:
+    - sleep
+    - "3600"
+  restartPolicy: OnFailure
